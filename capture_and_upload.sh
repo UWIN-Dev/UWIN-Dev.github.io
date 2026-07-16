@@ -16,7 +16,7 @@
 # ---------------------------------------------------------------------------
 
 # Absolute path to your local clone of the GitHub Pages repo
-REPO_DIR="/home/pi/grow-beyond-earth"
+REPO_DIR="/home/csic/grow-beyond-earth"
 
 # Subfolder inside the repo where daily images are stored
 IMAGES_SUBDIR="images"
@@ -35,7 +35,7 @@ WARMUP_FRAMES=5
 GIT_BRANCH="main"
 
 # Log file (rotated manually or via logrotate, see README)
-LOG_FILE="/home/pi/grow-beyond-earth/capture.log"
+LOG_FILE="/home/csic/grow-beyond-earth/capture.log"
 
 # Timelapse GIF settings
 TIMELAPSE_FILE="timelapse.gif"     # written to repo root
