@@ -1,411 +1,193 @@
 <!DOCTYPE html>
-<html  >
+<html lang="en">
 <head>
-    <style>
-body {overflow: hidden;}
-html {overflow: hidden;}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grow Beyond Earth — UWIN Astronomy Camp 2026</title>
+<style>
+  :root {
+    --bg: #0b1220;
+    --panel: #131c2e;
+    --accent: #4fb0ff;
+    --text: #e8edf5;
+    --muted: #93a1b8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  header {
+    padding: 2rem 1.5rem 1rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0 0 0.25rem;
+    font-size: 1.6rem;
+  }
+  header p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 3rem;
+  }
+  section {
+    margin-bottom: 2.5rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+    color: var(--accent);
+    border-bottom: 1px solid #24304a;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .latest-card {
+    background: var(--panel);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+  }
+  .latest-card img {
+    width: 100%;
+    max-height: 520px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #000;
+  }
+  .latest-caption {
+    margin-top: 0.75rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  .timelapse-card {
+    background: var(--panel);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+  }
+  .timelapse-card img {
+    width: 100%;
+    border-radius: 8px;
+    background: #000;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.75rem;
+  }
+  .gallery a {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--panel);
+    text-decoration: none;
+  }
+  .gallery img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+  }
+  .gallery span {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-align: center;
+    padding: 0.35rem 0;
+  }
+  .empty-state, .loading-state {
+    color: var(--muted);
+    text-align: center;
+    padding: 2rem 0;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+    padding: 1.5rem;
+  }
 </style>
-  <!-- Site made with Mobirise Website Builder v5.8.9, https://mobirise.com -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v5.8.9, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/uwinfavicon180x180.svg" type="image/x-icon">
-  <meta name="description" content="">
-  
-  
-  <title>Home</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link href="assets/fonts/style.css" rel="stylesheet">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Outfit:100,200,300,400,500,600,700,800,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit:100,200,300,400,500,600,700,800,900&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-
-  
-  
-  
 </head>
 <body>
-  
-  <section data-bs-version="5.1" class="header19 cid-sFGzrhlvIh" id="header19-3">
 
-    
+<header>
+  <h1>🌱 Grow Beyond Earth — Daily Growth Chamber</h1>
+  <p>UWIN Astronomy Camp 2026 · NASA Grow Beyond Earth Project · one photo every day at noon</p>
+</header>
 
-    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(164, 22, 35);">
+<main>
+
+  <section id="latest-section">
+    <h2>Latest Image</h2>
+    <div class="latest-card">
+      <div id="latest-content" class="loading-state">Loading…</div>
     </div>
+  </section>
 
-    <div class="container">
-        <div class="media-container">
-            <div class="col-md-12 col-lg-10 m-auto align-center">
-                <h1 class="mbr-section-title mbr-white mbr-fonts-style mb-3 display-1"><strong>University of Wyoming</strong><br><strong>Innovation Network</strong></h1>
-                <p class="mbr-text mbr-white mbr-fonts-style display-5">
-                    Where Curiosity Becomes Creation</p>
-                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-4" href="https://mobiri.se/">Get Started</a> <a class="btn btn-secondary display-4" href="index.html#features19-a">Read More</a></div>
-
-                <div class="row pt-5 justify-content-center">
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="card-wrapper">
-                            <div class="card-box align-center">
-                                <span class="mbr-iconfont mobi-mbri-cash mobi-mbri" style="color: rgb(55, 150, 131); fill: rgb(55, 150, 131);"></span>
-                                <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong>Market Analysis</strong></h4>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                </div>
-            </div>
-        </div>
+  <section id="timelapse-section">
+    <h2>Timelapse</h2>
+    <div class="timelapse-card">
+      <img src="timelapse.gif" alt="Growth timelapse" id="timelapse-gif"
+           onerror="this.parentElement.innerHTML='<p class=&quot;empty-state&quot;>Timelapse not generated yet — check back after a few days of images.</p>'">
     </div>
-</section>
+  </section>
 
-<section data-bs-version="5.1" class="features15 cid-tF3THLx9b4" id="features16-0">
-
-    
-
-    
-    
-    <div class="container">
-        <div class="content-wrapper">
-            <div class="row align-items-center">
-                <div class="col-12 col-lg">
-                    <div class="text-wrapper">
-                        <h6 class="card-title mbr-fonts-style display-2">
-                            <strong>What is UWIN?</strong></h6>
-                        <p class="mbr-text mbr-fonts-style mb-4 display-4">
-                            Themes in the Mobirise website builder offer multiple blocks: intros, sliders, galleries, forms, articles, and so on. Start a project and click on the red plus buttons to see the blocks available for your theme.<br>Themes in the Mobirise website builder offer multiple blocks: intros, sliders, galleries, forms, articles, and so on. Start a project and click on the red plus buttons to see the blocks available for your theme<br><br>Themes in the Mobirise website builder offer multiple blocks: intros, sliders, galleries, forms, articles, and so on. Start a project and click on the red plus buttons to see the blocks available for your theme<br><br>Themes in the Mobirise website builder offer multiple blocks: intros, sliders, galleries, forms, articles, and so on. Start a project and click on the red plus buttons to see the blocks available for your theme<br>Themes in the Mobirise website builder offer multiple blocks: intros, sliders, galleries, forms, articles, and so on. Start a project and click on the red plus buttons to see the blocks available for your theme<br></p>
-                        
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="image-wrapper">
-                        <img src="assets/images/ps-twotone-500x500.svg" alt="UWIN Simple Logo">
-                    </div>
-                </div>
-            </div>
-        </div>
+  <section id="gallery-section">
+    <h2>All Daily Images</h2>
+    <div id="gallery" class="gallery">
+      <div class="loading-state">Loading…</div>
     </div>
-</section>
+  </section>
 
-<section data-bs-version="5.1" class="features13 cid-tF3TLoa3ui" id="features14-1">
-    
+</main>
 
-    
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h3 class="mbr-section-title align-center mb-4 mbr-fonts-style display-2"><strong>What we have to offer!</strong></h3>
-            </div>
-            <div class="card col-12 col-md-4 col-lg-2 p-3">
-                <div class="card-wrapper">
-                    <div class="card-box align-center">
-                        <span class="mbr-iconfont mobi-mbri-image-gallery mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7">
-                            <strong>FDM 3D Printing</strong></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-4 col-lg-2">
-                <div class="card-wrapper">
-                    <div class="card-box align-center">
-                        <span class="mbr-iconfont mobi-mbri-website-theme-2 mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7">
-                            <strong>SLA 3D Printing</strong></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-4 col-lg-2">
-                <div class="card-wrapper">
-                    <div class="card-box align-center">
-                        <span class="mbr-iconfont mobi-mbri-contact-form mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7">
-                            <strong>Laser Engraving</strong></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-4 col-lg-2">
-                <div class="card-wrapper">
-                    <div class="card-box align-center">
-                        <span class="mbr-iconfont mobi-mbri-features mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7">
-                            <strong>Sewing</strong></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-4 col-lg-2">
-                <div class="card-wrapper">
-                    <div class="card-box align-center">
-                        <span class="mbr-iconfont mobi-mbri-cust-feedback mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7">
-                            <strong>Auto Embroidery</strong></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-4 col-lg-2">
-                <div class="card-wrapper">
-                    <div class="card-box align-center">
-                        <span class="mbr-iconfont mobi-mbri-devices mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7">
-                            <strong>CNC Routing</strong></h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<footer>
+  Updated automatically once a day. Source: <code>data/manifest.json</code>
+</footer>
 
-<section data-bs-version="5.1" class="features13 cid-tF3TLAA8SR" id="features14-2">
-    
+<script>
+async function loadGallery() {
+  const latestEl = document.getElementById('latest-content');
+  const galleryEl = document.getElementById('gallery');
 
-    
-    
-    <div class="container">
-        <div class="row">
-            
-            <div class="card col-12 col-md-4 col-lg-2 p-3">
-                <div class="card-wrapper">
-                    <div class="card-box align-center">
-                        <span class="mbr-iconfont mobi-mbri-image-gallery mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7">
-                            <strong>PCB Prototyping</strong></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-4 col-lg-2">
-                <div class="card-wrapper">
-                    <div class="card-box align-center">
-                        <span class="mbr-iconfont mobi-mbri-website-theme-2 mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7">
-                            <strong>Multi-Media Printing</strong></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-4 col-lg-2">
-                <div class="card-wrapper">
-                    <div class="card-box align-center">
-                        <span class="mbr-iconfont mobi-mbri-contact-form mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong>Vinyl Cutting</strong></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-4 col-lg-2">
-                <div class="card-wrapper">
-                    <div class="card-box align-center">
-                        <span class="mbr-iconfont mobi-mbri-features mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7">
-                            <strong>Tool Benches</strong></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-4 col-lg-2">
-                <div class="card-wrapper">
-                    <div class="card-box align-center">
-                        <span class="mbr-iconfont mobi-mbri-cust-feedback mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7">
-                            <strong>Electronic Benches</strong></h4>
-                    </div>
-                </div>
-            </div>
-            <div class="card p-3 col-12 col-md-4 col-lg-2">
-                <div class="card-wrapper">
-                    <div class="card-box align-center">
-                        <span class="mbr-iconfont mobi-mbri-devices mobi-mbri"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7">
-                            <strong>Large Craft Selection</strong></h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+  try {
+    const res = await fetch('data/manifest.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('manifest not found');
+    const files = await res.json(); // expected newest-first
 
-<section data-bs-version="5.1" class="slider5 mbr-embla cid-tF3U3uPew5" id="slider5-3">
-    
-    
-    <div class="position-relative">
-        <div class="mbr-section-head">
-            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                <strong>UWIN Locations</strong></h4>
-            
-        </div>
-        <div class="embla mt-4" data-skip-snaps="true" data-align="center" data-contain-scroll="trimSnaps" data-loop="true" data-auto-play-interval="3" data-draggable="true">
-            <div class="embla__viewport container">
-                <div class="embla__container">
-                    <div class="embla__slide slider-image item" style="margin-left: 3rem; margin-right: 3rem;">
-                        <div class="slide-content">
-                            <div class="item-img">
-                                <div class="item-wrapper">
-                                    <img src="assets/images/csic690x690.png" alt="Mobirise Website Builder" title="">
-                                </div>
-                            </div>
-                            <div class="item-content">
-                                <h5 class="item-title mbr-fonts-style display-5"><strong>Coe Student Innovation Center</strong></h5>
-                                <h6 class="item-subtitle mbr-fonts-style mt-1 display-7">Crafts, Vinyl, Laser Engraving, 3D Printing, Multi-Media Printing</h6>
-                                <p class="mbr-text mbr-fonts-style mt-3 display-7">The CSIC sadjf; a;sdkjf;sdkjf&nbsp; sladjkshf lhalsdjfh asldjfhklsajdhflkjh alksjdhfljhalskjkdfhlj lkasdhjfl.</p>
-                            </div>
-                            <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn item-btn btn-black display-7" target="_top">Learn More&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&gt;</a></div>
-                        </div>
-                    </div>
-                    <div class="embla__slide slider-image item" style="margin-left: 3rem; margin-right: 3rem;">
-                        <div class="slide-content">
-                            <div class="item-img">
-                                <div class="item-wrapper">
-                                    <img src="assets/images/uwin690x690.png" alt="Mobirise Website Builder" title="">
-                                </div>
-                            </div>
-                            <div class="item-content">
-                                <h5 class="item-title mbr-fonts-style display-5"><strong>Make-IT-Space</strong></h5>
-                                <h6 class="item-subtitle mbr-fonts-style mt-1 display-7">
-                                    Vinyl, Laser Engraving, 3D Printing, Multimedia Printing, VR/AR/XR</h6>
-                                <p class="mbr-text mbr-fonts-style mt-3 display-7">The Make-IT-Space asjhakd kajghsdfkjh kjahdsgfkaj kjsahgdfkg khasgdfkjhgds&nbsp; kdjghaskghaflk laksjdhf.</p>
-                            </div>
-                            <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn item-btn btn-black display-7" target="_top">Learn More&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&gt;</a></div>
-                        </div>
-                    </div>
-                    
-                    <div class="embla__slide slider-image item" style="margin-left: 3rem; margin-right: 3rem;">
-                        <div class="slide-content">
-                            <div class="item-img">
-                                <div class="item-wrapper">
-                                    <img src="assets/images/scidiy690x690.png" alt="Mobirise Website Builder" title="">
-                                </div>
-                            </div>
-                            <div class="item-content">
-                                <h5 class="item-title mbr-fonts-style display-5"><strong>SciDIY</strong></h5>
-                                <h6 class="item-subtitle mbr-fonts-style mt-1 display-7">3D Printing, Electronics, VR/XR/AR</h6>
-                                <p class="mbr-text mbr-fonts-style mt-3 display-7">The SciDIY asdfjhl alkdsjfh lkjfahlasjldhf kjasdhflkjashdfl aldskjfhlkjdsh lkasjdhflajsdhhlasdkj kajsdh.<br></p>
-                            </div>
-                            <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn item-btn btn-black display-7" target="_top">Learn More&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&gt;</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="embla__button embla__button--prev">
-                <span class="mobi-mbri mobi-mbri-arrow-prev mbr-iconfont" aria-hidden="true"></span>
-                <span class="sr-only visually-hidden visually-hidden">Previous</span>
-            </button>
-            <button class="embla__button embla__button--next">
-                <span class="mobi-mbri mobi-mbri-arrow-next mbr-iconfont" aria-hidden="true"></span>
-                <span class="sr-only visually-hidden visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-</section>
+    if (!files.length) {
+      latestEl.innerHTML = '<p class="empty-state">No images yet — check back after the first capture.</p>';
+      galleryEl.innerHTML = '<p class="empty-state">No images yet.</p>';
+      return;
+    }
 
-<section data-bs-version="5.1" class="gallery2 cid-tF3UcJF2vK" id="gallery2-4">
-    
-    
-    <div class="container">
-        <div class="mbr-section-head">
-            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Programs and Activities</strong></h4>
-            
-        </div>
-        <div class="row mt-4">
-            <div class="item features-image сol-12 col-md-6 col-lg-6">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/features1.jpg" alt="Mobirise Website Builder">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-5">UWIN Workshops</h5>
-                        
-                        <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                            Workshop Info</p>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-6">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/features2.jpg" alt="Mobirise Website Builder">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-5">GeekOut Program</h5>
-                        
-                        <p class="mbr-text mbr-fonts-style mt-3 display-7">GeekOut Info</p>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-6">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/features3.jpg" alt="Mobirise Website Builder">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-5">Youth Programs</h5>
-                        
-                        <p class="mbr-text mbr-fonts-style mt-3 display-7">Youth Program general info</p>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-6">
-                <div class="item-wrapper">
-                    <div class="item-img">
-                        <img src="assets/images/features4.jpg" alt="Mobirise Website Builder" title="">
-                    </div>
-                    <div class="item-content">
-                        <h5 class="item-title mbr-fonts-style display-5">Community Collaboration</h5>
-                        
-                        <p class="mbr-text mbr-fonts-style mt-3 display-7">Community Collaboration general info</p>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    const [latest, ...rest] = files;
+    latestEl.innerHTML = `
+      <img src="images/${latest}" alt="Latest daily image (${latest})">
+      <div class="latest-caption">${latest}</div>
+    `;
 
-<section data-bs-version="5.1" class="contacts3 map1 cid-tF3UNwlrN0" id="contacts3-5">
+    galleryEl.innerHTML = files.map(f => `
+      <a href="images/${f}" target="_blank" rel="noopener">
+        <img src="images/${f}" alt="Image from ${f}" loading="lazy">
+        <span>${f.replace(/\.(jpg|jpeg|png)$/i, '')}</span>
+      </a>
+    `).join('');
+  } catch (err) {
+    latestEl.innerHTML = '<p class="empty-state">Could not load images yet.</p>';
+    galleryEl.innerHTML = '<p class="empty-state">Could not load images yet.</p>';
+    console.error(err);
+  }
+}
 
-    
+loadGallery();
+</script>
 
-    
-    
-    <div class="container">
-        <div class="mbr-section-head">
-            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                <strong>Quick Links and Map</strong></h3>
-            
-        </div>
-        <div class="row justify-content-center mt-4">
-            <div class="card col-12 col-md-6">
-                <div class="card-wrapper">
-                    <div class="image-wrapper">
-                        <span class="mbr-iconfont mobi-mbri-add-submenu mobi-mbri"></span>
-                    </div>
-                    <div class="text-wrapper">
-                        <h6 class="card-title mbr-fonts-style mb-1 display-5">
-                            <strong>F.A.Q</strong></h6>
-                        <p class="mbr-text mbr-fonts-style display-7">Frequently Asked Questions</p>
-                    </div>
-                </div>
-                <div class="card-wrapper">
-                    <div class="image-wrapper">
-                        <span class="mbr-iconfont mobi-mbri-paper-plane mobi-mbri"></span>
-                    </div>
-                    <div class="text-wrapper">
-                        <h6 class="card-title mbr-fonts-style mb-1 display-5">
-                            <strong>Contact Us!</strong></h6>
-                        <p class="mbr-text mbr-fonts-style display-7"><a href="mailto:csic@uwyo.edu" class="text-primary">csic@uwyo.edu</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="map-wrapper col-12 col-md-6">
-                <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/d/embed?mid=1v-4VMzATjFpdXwkLjw0ZGjysbDIUAaA&amp;ehbc=2E312F" allowfullscreen=""></iframe></div>
-            </div>
-        </div>
-    </div>
-</section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/theme/js/script.js"></script>  
-  
-  
 </body>
 </html>
